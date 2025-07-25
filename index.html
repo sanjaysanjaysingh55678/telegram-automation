@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cruel Women's Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="font-family:sans-serif; text-align:center; margin-top:10%;">
+  <h1>Welcome to Cruel Women's Channel</h1>
+  <p>Click below to join the latest secure Telegram channel.</p>
+  <a href="#" id="joinLink" style="font-size:20px; color:white; background:#000; padding:10px 20px; text-decoration:none; border-radius:5px;">Join Now</a>
+  <script>
+    fetch('user_data.json')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('joinLink').href = data.latest_channel_link;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+services:
+  - type: web
+    name: cruel-womens-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python group_monitor_bot.py"
+    plan: free
+  - type: cron
+    name: cruel-womens-cron
+    env: python
+    schedule: "0 2 * * *"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python auto_channel.py"
+    plan: free
