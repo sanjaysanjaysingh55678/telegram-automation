@@ -32,7 +32,7 @@ async def handler(event):
         user = await event.get_user()
         geo = get_geo_info()
         age = account_age(user)
-        msg = f"👤 New Join Request:
+        msg = f"👤 New Join Request"
 
 🆔 Username: @{user.username}
 🌍 Country: {geo}
